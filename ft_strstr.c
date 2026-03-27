@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strstr(char *str, char *to_find)
 {
 	char	*match_start;
@@ -35,4 +37,13 @@ char	*ft_strstr(char *str, char *to_find)
 		str++;
 	}
 	return (match_start);
+}
+
+int main()
+{
+	printf("%s\n", ft_strstr("Gandalf Il grigio", "Il grigio"));
+	printf("%s\n", ft_strstr("Frodo Baggins", "gg"));
+	printf("%p\n", ft_strstr("Legolas", "prova"));
+	
+	return (0);
 }
