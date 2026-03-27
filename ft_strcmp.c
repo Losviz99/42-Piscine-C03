@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+#include <stdio.h>
 
+int	ft_strcmp(char *s1, char *s2)
+{
 	while (*s1 != '\0' || *s2 != '\0')
 	{
 		if (*s1 != *s2)
@@ -20,4 +22,17 @@ int	ft_strcmp(char *s1, char *s2)
 		s2++;
 	}
 	return (0);
-}	
+}
+
+int main()
+{
+	printf("Test 1: %d\n", ft_strcmp("Frodo", "Frodo"));
+	printf("Test 2: %d\n", ft_strcmp("Frodo", "Beggins"));
+	printf("Test 3: %d\n", ft_strcmp("Beggins", "Frodo"));
+	printf("Test 4: %d\n", ft_strcmp("abc", "abcd"));
+	printf("Test 5: %d\n", ft_strcmp("abcd", "abc"));
+	printf("Test 6: %d\n", ft_strcmp("", ""));
+	printf("Test 7: %d\n", ft_strcmp("test", ""));
+	
+	return (0);
+}
