@@ -8,16 +8,28 @@
 /*   Created: 2026/03/27 12:32:12 by lsvizzer          #+#    #+#             */
 /*   Updated: 2026/03/27 12:46:07 by lsvizzer         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */int	ft_strncmp (char *s1, char *s2, unsigned int n)
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	while ((*s1 != '\0' || *s2 != '\0') && n > 0)
 	{
-		if (*s1 != *s2);
+		if (*s1 != *s2)
 			return (*s1 - *s2);
 		s1++;
 		s2++;
 		n--;
 	}
-	return (0):
-}		
- 	
+	return (0);
+}
+
+int main()
+{
+	printf("%d\n", ft_strncmp("Frodo", "Frodo", 5));
+	printf("%d\n", ft_strncmp("Frodo", "Froda", 5));
+	printf("%d\n", ft_strncmp("Frodo", "Froda", 4));
+	
+	return (0);
+}
