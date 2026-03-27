@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	char	*res;
@@ -28,3 +30,15 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	return (res);
 }
 
+int main()
+{
+	char dest1[50] = "Frodo ";
+	char dest2[50] = "Ganfalf ";
+	char dest3[50] = "";
+	
+	printf("Test 1: %s\n", ft_strncat(dest1, "Baggins", 3));
+	printf("Test 2: %s\n", ft_strncat(dest2, "Il grigio", 5));
+	printf("Test 3: %s\n", ft_strncat(dest3, "Vuota", 6));
+	
+	return (0);
+}
